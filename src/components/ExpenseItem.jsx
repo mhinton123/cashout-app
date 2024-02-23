@@ -6,7 +6,7 @@ export default function ExpenseItem(props) {
 
         // Remove item from expenses Arr
         props.setExpenses(prev => {
-            return prev.filter(item => item.id != props.uid)
+            return prev.filter(item => item.id !== props.uid)
         })
 
         // calculate remaining Budget
