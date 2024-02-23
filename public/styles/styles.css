@@ -1,0 +1,256 @@
+/* Colours */
+
+:root {
+    --gray800: #343A40;
+    --gray700: #515151;
+    --gray300: #B9B9B9;
+    --gray200: #D7D7D7;
+    --lightblue: #00D1FF;
+    --background: #F8F8F8;
+}
+
+
+body, button, input, h4 {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.06rem;
+}
+
+p, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: none;
+    padding: 0.5em 0.8em;
+    border-radius: 5px;
+    border: 1px solid var(--gray200);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.primary-btn {
+    padding: 0.5em 0.5em;
+    background-color: var(--gray300);
+    color: black;
+    border: none;
+    border-radius: 3px;
+}
+
+.primary-btn:hover {
+    background-color: var(--gray800);
+}
+
+/* Header */
+
+header {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray800);
+}
+
+.logo {
+    height: 37px;
+    width: 166px;
+}
+
+/* Main */
+
+main {
+    padding: 1em;
+}
+
+.hero-img {
+    max-width: 100%;
+    display: none;
+}
+
+    /* Budget Options */
+
+.budget-options-wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.daily-budget-wr{
+    align-items: center;
+    padding: 1em 0;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.daily-budget-wr form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+#daily-budget {
+    font-weight: 700;
+}
+
+.wallet-icon {
+    margin-right: 1em;
+}
+
+.edit-icon, .wallet-icon {
+    height: 35px;
+    align-self:center;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.edit-icon:hover {
+    background-color: var(--gray300);
+}
+
+
+
+    /* Budget Overview */
+    
+.budget-overview-wr {
+    background-color: var(--lightblue);
+    border-radius: 10px;
+    display: flex;
+    padding: 1em 1.3em;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+
+.budget-overview-wr .left-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.budget-overview-wr h4 {
+    color: white;
+    font-size: 1.25rem;
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 6px;
+}
+
+.budget-overview-wr .right-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#total-spent {
+    font-size: 1.875rem;
+    color: white;
+    margin: 0;
+    align-self: flex-end;
+}
+
+#remaining-budget {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    align-self: flex-end;
+}
+
+    /* Add Expense Form */
+    
+.add-expense-form-wr {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.add-expense-form-wr form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#add-expense-btn {
+    border: none;
+    background-color: var(--gray200);
+    color: var(--);
+    border-radius: 5px;
+    padding: 0.5em 0.8em;
+    font-weight: 700;
+}
+
+    /* Expense List */ 
+
+.expenses-list-wr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1.5em;
+}
+
+.expense-wr {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    border-bottom: var(--gray200) solid 1px;
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-wr .right-col {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.3em;
+}
+
+.expense-name, .expense-amount {
+    white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides the overflowing text */
+  text-overflow: ellipsis;
+}
+
+
+
+/* Larger screens */
+
+@media screen and (min-width: 800px) {
+    main {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 2em;
+        padding: 2em;
+    }
+
+    main .left-col, main .right-col {
+        max-width: 100%;
+    }
+
+    .hero-img {
+        display: block;
+    }
+
+    .expenses-list-wr {
+        margin: 0;
+    }
+
+    #add-expense-btn {
+        padding: 0.8em;
+    }
+}
+
+
+
+
+
+
+
