@@ -19,6 +19,7 @@ export default function ExpenseList(props) {
     
     return (
         <div className="expence-list-wr">
+            <h4>Expense List</h4>
             <div className="right-col">
             <div className="expenses-list-wr">
                 {expensesJSX}
